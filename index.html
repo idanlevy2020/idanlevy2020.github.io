@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Idan Levy CV</title>
+  </head>
+  <style>
+    * {
+      margin: 0px;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      background-color: #d6d6cf;
+    }
+
+    .row {
+      /* background-color: lightgray; */
+      background-color: #d4d4d400;
+      display: flex;
+      flex-direction: row;
+    }
+
+    .row > .side {
+      background-color:#000000d5; 
+      /* background-color:#000000be;  */
+      /* background-color:#00000067;  */
+      color:white;
+      flex: 30%;
+      padding-bottom: 20px;
+      margin: 12px 12px 40px 30px; 
+      box-shadow:2px 2px 2px 4px gray;
+    }
+
+    /******************************* side_part1: image idan ************************************/
+    .row > .side > .side_part1{
+        display: flex;
+        position: relative;
+        max-width: 800px;
+        margin-bottom: 15px;
+    }
+
+    .row > .side > .side_part1 img{
+        width:100%;
+        height:40%;
+    }
+
+    .row > .side > .side_part1 > .content {
+        align-self: flex-end;
+        position: absolute;
+        bottom: 1;
+        background: black; /* Fallback color */
+        background: #00000080; /* Black background with 0.5 opacity */
+        color: #f1f1f1;
+        width: 100%;
+        padding: 20px;
+    }
+    /******************************* End side_part1: image idan ********************************/
+
+    /******************************* side_part2: Personal informaion ***************************/
+    .row > .side > .side_part2 > .side_part2_child {
+      display: flex;
+      padding-left: 15px;
+    }
+
+    .row > .side > .side_part2 > .side_part2_child > .side_part2_child_icon {
+      flex: 10%;
+    }
+
+
+    .row > .side > .side_part2 > .side_part2_child > .side_part2_child_icon img {
+      width: 20px;
+      height: 20px;
+    }
+
+    .row > .side > .side_part2 > .side_part2_child > .side_part2_child_text {
+      flex: 90%;
+      padding: 5px 0px 15px 15px;
+    }
+    /******************************* End side_part2: Personal informaion ***********************/
+
+    /******************************* side_part3: Skills ****************************************/
+    .row > .side > .side_part3 > .side_part3_childTitle {
+      display: flex;
+      flex-direction: row;
+      padding-left: 10px;
+    }
+
+    .row > .side > .side_part3 > .side_part3_childTitle > .side_part3_childTitle_icon {
+      flex: 10%; /* the other (flex: 90%) in .side_part3_child_title  */
+      padding: 5px 0px 15px 0px;
+    }
+
+    .row > .side > .side_part3 > .side_part3_childTitle > .side_part3_childTitle_title {
+      flex: 90%; /* the other (flex: 10%) in .side_part3_child_icon */
+      padding: 5px 0px 15px 5px;
+    }
+
+
+    .row > .side > .side_part3 > .side_part3_childTitle > .side_part3_childTitle_icon img {
+      width: 20px;
+      height: 20px;
+    }
+
+
+    .row > .side > .side_part3 > .side_part3_child {
+      display: flex;
+      flex-direction: column;
+      padding-left: 10px;
+    }
+
+    .row > .side > .side_part3 > .side_part3_child > .side_part3_child_description {
+      flex: 5%;
+      padding: 5px 0px 10px 10px;
+    }
+
+    .row > .side > .side_part3 > .side_part3_child > .side_part3_child_value {
+      flex: 5%;
+      background-color: gray;
+      border-radius: 15px;
+      margin: 5px 10px 5px 5px;
+    }
+
+    .row > .side > .side_part3 > .side_part3_child > .side_part3_child_value> div {
+      flex: 95%;
+      border-radius: 15px;
+      font-weight: bold;
+      background-color: orange;
+      color: black;
+      text-align: center;
+    }
+    /******************************* side_part3: End Skills ************************************/
+
+    /******************************* side_part4: Contact me ****************************************/
+    .row > .side > .side_part4 > .side_part4_childTitle {
+      display: flex;
+      flex-direction: row;
+      padding-left: 10px;
+    }
+
+    .row > .side > .side_part4 > .side_part4_childTitle > .side_part4_childTitle_icon {
+      flex: 10%; /* the other (flex: 90%) in .side_part3_child_title  */
+      padding: 5px 0px 15px 0px;
+    }
+
+    .row > .side > .side_part4 > .side_part4_childTitle > .side_part4_childTitle_title {
+      flex: 90%; /* the other (flex: 10%) in .side_part3_child_icon */
+      padding: 5px 0px 15px 5px;
+    }
+
+
+    .row > .side > .side_part4 > .side_part4_childTitle > .side_part4_childTitle_icon img {
+      width: 20px;
+      height: 20px;
+    }
+
+
+    .container {
+      border-radius: 5px;
+      /* background-color: #f2f2f2; */
+      padding: 20px;
+    }
+
+
+    input[type=text], select, textarea {
+      width: 95%;
+      padding: 12px;
+      background-color: white;
+      color:black;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: vertical;
+    }
+
+
+
+    input[type=submit] {
+      background-color: orange;
+      font-weight: bold;
+      color: black;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    input[type=submit]:hover {
+      background-color: #d8920fde;
+    }
+
+
+    /******************************* side_part4: End Contact me ************************************/
+
+    .row > .main {
+      background-color: lightgray;
+      flex: 70%;
+      margin: 12px 30px 12px 0px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .row > .main > .main_container {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 12px;
+      padding-left: 15px;
+      background-color: white;
+      /* padding-bottom: 550px; */
+      box-shadow:2px 2px 2px 4px gray;
+    }
+
+    .row > .main > .main_container > .main_container_title {
+      /* color:#ffae00; */
+      text-shadow: 2px 2px orange;
+      margin-top: 12px;
+      display: flex;
+      flex-direction: row;
+    }
+
+    .row > .main > .main_container > .main_container_subtitle {
+      margin-top: 12px;
+    }
+
+
+    .row > .main > .main_container > .main_container_title > .icon {
+      flex: 10%;
+    }
+
+    .row > .main > .main_container > .main_container_title > .icon img {
+      width: 40px;
+      height: 40px;
+    }
+
+    .row > .main > .main_container > .main_container_title > .text {
+      flex: 90%;
+    }
+
+    .row > .main > .main_container > .main_container_container_iconYears {
+      display: flex;
+      align-items: center;
+      margin-top: 12px;
+    }
+
+/*
+    .row > .main > .main_container > .main_container_container_iconYears > .main_container_icon {
+    }
+*/
+
+    .row > .main > .main_container > .main_container_container_iconYears > .main_container_icon img {
+      width: 30px;
+      height: 30px;
+    }
+
+    .row > .main > .main_container > .main_container_container_iconYears > .main_container_years{
+      padding: 5px 0px 5px 10px;
+    }
+
+    .row > .main > .main_container > .main_container_description{
+      margin: 12px 0px 36px 0px;
+    }
+
+
+    .footer {
+      background-color: black;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 700px) {
+      .row {
+        flex-direction: column;
+      }
+
+      .row > .side {
+        margin-right: 12px;
+        margin-left: 12px;
+      }
+
+      .row > .main {
+        margin: 0px 0px 0px 0px;
+      }
+
+      .row > .main > .main_container {
+        margin-right: 12px;
+        margin-left: 12px;
+      }
+    }
+  </style>
+  <body>
+    <div class="row">
+      <!--container-->
+      <div class="side">
+        <!-- I divided the box (side) into 4 parts:
+                  part 1 is the picture, part 2 is the Personal Information, part 3 is the Skills and part 4 is the Languages-->
+
+        <!------------------ part 1 - image idan ------------------>
+
+        <div class="side_part1">
+          <img src="images/img_idan.jpg" alt="img_idan" />
+          <div class="content">
+            <h1>Idan Levy</h1>
+            <p style="font-weight:bold"> Front End Developer </p>
+          </div>
+        </div>
+
+        <!------------------ part 2 - Personal informaion ------------------>
+        <div class="side_part2">
+            <div class="side_part2_child">
+              <div class="side_part2_child_icon">
+                <img src="images/bag.png" alt="bag" />
+              </div>
+              <div class="side_part2_child_text">
+                Front End Developer
+              </div>
+            </div>
+            <div class="side_part2_child">
+              <div class="side_part2_child_icon">
+                <img src="images/house.png" alt="house" />
+              </div>
+              <div class="side_part2_child_text">Israel, Holon</div>
+            </div>
+            <div class="side_part2_child">
+              <div class="side_part2_child_icon">
+                <img src="images/mail.png" alt="mail" />
+              </div>
+              <div class="side_part2_child_text"> idanlevy2020@gmail.com </div>
+            </div>
+            <div class="side_part2_child">
+              <div class="side_part2_child_icon">
+                <img src="images/phone.png" alt="phone" />
+              </div>
+              <div class="side_part2_child_text">054-9919289</div>
+            </div>
+            <hr style="margin:15px" />
+        </div>
+
+        <!------------------ part 3 - Professional Skills ------------------>
+
+        <div class="side_part3">
+            <div class="side_part3_childTitle">
+              <div class="side_part3_childTitle_icon">
+                <img src="images/asterisk.png" alt="asterisk" />
+              </div>
+              <div class="side_part3_childTitle_title">
+                <h3> Professional Skills </h3> 
+              </div>
+            </div>
+
+            <div class="side_part3_child">
+              <div class="side_part3_child_description">
+                <p> html </p>
+              </div>
+              <div class="side_part3_child_value"> 
+                <div style="margin-right: 5%;"> 95% </div>
+              </div>
+            </div>
+
+            <div class="side_part3_child">
+              <div class="side_part3_child_description">
+                <p> CSS </p>
+              </div>
+              <div class="side_part3_child_value"> 
+                <div style="margin-right: 15%;"> 85% </div>
+              </div>
+            </div>
+
+            <div class="side_part3_child">
+              <div class="side_part3_child_description">
+                <p> JS </p>
+              </div>
+              <div class="side_part3_child_value"> 
+                <div style="margin-right: 20%;"> 80% </div>
+              </div>
+            </div>
+
+            <div class="side_part3_child">
+              <div class="side_part3_child_description">
+                <p> PHP </p>
+              </div>
+              <div class="side_part3_child_value"> 
+                <div style="margin-right: 60%;"> 40% </div>
+              </div>
+            </div>
+
+            <div class="side_part3_child">
+              <div class="side_part3_child_description">
+                <p> Adobe Photoshop </p>
+              </div>
+              <div class="side_part3_child_value"> 
+                <div style="margin-right: 50%;"> 50% </div>
+              </div>
+              <hr style="margin:15px" /> 
+            </div>
+         </div> <!-- End part 3 -Professional Skills -->
+        
+        
+         <!------------------ part 4 - Contact Me ------------------> 
+         <div class="side_part4">
+          <div class="side_part4_childTitle">
+            <div class="side_part4_childTitle_icon">
+              <img src="images/contact.png" alt="contact" />
+            </div>
+            <div class="side_part4_childTitle_title">
+              <h3> Contact Me</h3> 
+            </div>
+          </div>
+
+          <div class="container">
+            <form action=" ">
+              <div> 
+                <div> <label for="fullname">Full Name:</label> </div>
+                <div> <input type="text" id="fname" name="name" placeholder="Your name..." required> </div>
+              </div>
+              <div> 
+                <div> <label for="email">Email:</label> </div>
+                <div> <input type="text" id="email" name="email" placeholder="Your email..." required> </div>
+              </div>
+              <div> 
+                <div> <label for="phone">Phone:</label> </div>
+                <div> <input type="text" id="phone" name="phone" placeholder="Your phone..." required> </div>
+              </div>
+              <div> 
+                <div> <label for="messege">Messege:</label></div>
+                <div> <textarea id="messege" name="messege" placeholder="Write something..." style="height:200px"></textarea> </div>
+              </div>
+          
+              <input type="submit" value="send messege">
+            </form>
+          </div>
+         </div><!-- End part 4 -Contact Me -->
+        
+        </div> <!-- End side-->
+
+      <div class="main">
+        <!------------------------------Education------------------------------>
+        <div class="main_container">
+          <div class="main_container_title">
+            <div class="icon">
+              <img src="images/degree.png" alt="degree" />
+            </div>
+            <div class="text">
+              <h1 style="margin: 5px 0px 0px 10px">Education</h1>
+            </div>
+          </div> <!--End main_container_title-->
+        <!----------------------------------------------->
+          <div class="main_container_subtitle">
+            <h3 style="font-weight:bold"> College of Management </h3>
+          </div>
+          <div class="main_container_container_iconYears">
+            <div class="main_container_icon">
+              <img src="images/calander.png" alt="calander" />
+            </div>
+            <div class="main_container_years">
+              <h4>2012 - 2017</h4>
+            </div>
+          </div>
+          <div class="main_container_description">
+            <p>B.Sc in Computer Science</p>
+          </div>
+        <!----------------------------------------------->
+          <div class="main_container_subtitle">
+            <h3 style="font-weight:bold"> ORT Holon Science and Technology </h3>
+        </div>
+        <div class="main_container_container_iconYears">
+          <div class="main_container_icon">
+              <img src="images/calander.png" alt="calander" />
+          </div>
+          <div class="main_container_years">
+              <h4>2002 - 2005</h4>
+          </div>
+        </div>
+        <div class="main_container_description">
+          <p>Highschool diploma – Full matriculation + technological certificate in the field of computer science</p>
+        </div>
+        <!----------------------------------------------->
+        </div> <!-- End main_container-->
+      <!------------------------------End Education------------------------------>
+
+      <!------------------------------Work Experience------------------------------>
+        <div class="main_container">
+          <div class="main_container_title">
+            <div class="icon">
+              <img src="images/bag2.png" alt="bag" />
+            </div>
+            <div class="text">
+              <h1 style="margin: 5px 0px 0px 10px">Work Experience</h1>
+            </div>
+          </div> <!--End main_container_title-->
+          <!----------------------------------------------->
+          <div class="main_container_subtitle">
+             <h3 style="font-weight:bold"> Comsign </h3>
+          </div>
+          <div class="main_container_container_iconYears">
+            <div class="main_container_icon">
+               <img src="images/calander.png" alt="calander" />
+            </div>
+            <div class="main_container_years">
+               <h4>2014 - 2020</h4>
+            </div>
+          </div>
+          <div class="main_container_description">
+            <ul>
+              <li> The position included providing service to the company's customers. </li>
+              <li> Issuance of smart cards (information encryption) through which customers can perform various actions with government bodies and also through them invoices can be sent via email and more.</li>
+            </ul>
+          </div>
+         <!----------------------------------------------->
+          <div class="main_container_subtitle">
+            <h3 style="font-weight:bold"> Bank Leumi </h3>
+         </div>
+         <div class="main_container_container_iconYears">
+           <div class="main_container_icon">
+              <img src="images/calander.png" alt="calander" />
+           </div>
+           <div class="main_container_years">
+              <h4>2013 - 2014</h4>
+           </div>
+         </div>
+         <div class="main_container_description">
+          <ul>
+            <li> Teller, the position included handling the bank's customers,
+                 Deposit and withdrawal of funds, deposit of checks, bank transfers, etc. 
+            </li>
+          </ul>
+         </div>
+        <!----------------------------------------------->
+        <div class="main_container_subtitle">
+          <h3 style="font-weight:bold"> Cellcom </h3>
+       </div>
+       <div class="main_container_container_iconYears">
+         <div class="main_container_icon">
+            <img src="images/calander.png" alt="calander" />
+         </div>
+         <div class="main_container_years">
+            <h4>2009 - 2012</h4>
+         </div>
+       </div>
+       <div class="main_container_description">
+        <ul>
+          <li> Representative marketing, sales, and customer service. </li>
+        </ul>
+       </div>
+      <!----------------------------------------------->
+        </div> <!--End main_container-->
+      <!------------------------------End Work Experience------------------------------>
+
+            <!------------------------------Army------------------------------>
+            <div class="main_container">
+              <div class="main_container_title">
+                <div class="icon">
+                  <img src="images/army.png" alt="army" />
+                </div>
+                <div class="text">
+                  <h1 style="margin: 5px 0px 0px 10px">Army</h1>
+                </div>
+              </div> <!--End main_container_title-->
+             <!----------------------------------------------->
+              <div class="main_container_subtitle">
+                 <h3 style="font-weight:bold"> Air Force Safety Unit - Computer NCO in the computer section of the  </h3>
+              </div>
+              <div class="main_container_container_iconYears">
+                <div class="main_container_icon">
+                   <img src="images/calander.png" alt="calander" />
+                </div>
+                <div class="main_container_years">
+                   <h4>2005 - 2008</h4>
+                </div>
+              </div>
+              <div class="main_container_description">
+                <ul>
+                  <li> The role included providing computer troubleshooting support services to users / unit. </li>
+                  <li> Responsibility for the production of HA's safety information from the soldier information system.</li>
+                </ul>
+                <br/>
+                <h5> Outstanding on behalf of the head of the Air Brigade, Brigadier General Yohanan Locker. </h5>
+              </div>
+            <!----------------------------------------------->
+            </div> <!-- End main_container-->
+          <!------------------------------End Army------------------------------>
+      </div> <!-- End main-->
+    </div> <!-- End row-->
+    <div class="footer">
+      <p style="margin-bottom: 10px">Find me on social media.</p>
+      <p>Powered by idan levy</p>
+    </div>
+  </body>
+</html>
