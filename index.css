@@ -1,0 +1,314 @@
+* {
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  body{
+    background-color: #d6d6cf;
+  }
+
+  .main{
+    background-color: #d4d4d400;
+    display: flex;
+    flex-direction: row;
+  }
+  /* class main Contains a leftSide column with containers 
+      and a rightSide column with containers  */
+
+
+  /************************************** leftSide *************************************************/
+  /* I divided the box (leftSide) into 4 parts:
+  part 1 is the my profile (image), part 2 is the Personal Information, part 3 is the Skills and part 4 is the Contact me */
+
+  .main > .leftSide{
+    background-color:#000000d5; 
+    color:white;
+    flex: 30%;
+    padding-bottom: 20px;
+    margin: 12px 12px 40px 30px; 
+    box-shadow:2px 2px 2px 4px gray;
+  }
+
+  /******************************* leftSide_part1: image idan ************************************/
+  .main > .leftSide > .leftSide_part1{
+      display: flex;
+      position: relative;
+      max-width: 800px;
+      margin-bottom: 15px;
+  }
+
+  .main > .leftSide > .leftSide_part1 img{
+      width:100%;
+      height:40%;
+  }
+
+  .main > .leftSide > .leftSide_part1 > .content {
+      align-self: flex-end;
+      position: absolute;
+      bottom: 1;
+      background: black; /* Fallback color */
+      background: #00000080; /* Black background with 0.5 opacity */
+      color: #f1f1f1;
+      width: 100%;
+      padding: 20px;
+  }
+  /******************************* End leftSide_part1: image idan ********************************/
+
+  /******************************* leftSide_part2: Personal informaion ***************************/
+  .main > .leftSide > .leftSide_part2 > .leftSide_part2_child {
+    display: flex;
+    padding-left: 15px;
+  }
+
+  .main > .leftSide > .leftSide_part2 > .leftSide_part2_child > .leftSide_part2_child_icon {
+    flex: 10%;
+  }
+
+
+  .main > .leftSide > .leftSide_part2 > .leftSide_part2_child > .leftSide_part2_child_icon img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .main > .leftSide > .leftSide_part2 > .leftSide_part2_child > .leftSide_part2_child_text {
+    flex: 90%;
+    padding: 5px 0px 15px 15px;
+  }
+  /******************************* End leftSide_part2: Personal informaion ***********************/
+
+  /******************************* leftSide_part3: Skills ****************************************/
+  .main > .leftSide > .leftSide_part3 > .leftSide_part3_childTitle {
+    display: flex;
+    flex-direction: row;
+    padding-left: 10px;
+  }
+
+  .main > .leftSide > .side_part3 > .leftSide_part3_childTitle > .leftSide_part3_childTitle_icon {
+    flex: 10%; /* the other (flex: 90%) in .leftSide_part3_child_title  */
+    padding: 5px 0px 15px 0px;
+  }
+
+  .main > .leftSide > .leftSide_part3 > .leftSide_part3_childTitle > .leftSide_part3_childTitle_title {
+    flex: 90%; /* the other (flex: 10%) in .leftSide_part3_child_icon */
+    padding: 5px 0px 15px 5px;
+  }
+
+
+  .main > .leftSide > .leftSide_part3 > .leftSide_part3_childTitle > .leftSide_part3_childTitle_icon img {
+    width: 20px;
+    height: 20px;
+  }
+
+
+  .main > .leftSide > .leftSide_part3 > .leftSide_part3_child {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+  }
+
+  .main > .leftSide > .leftSide_part3 > .leftSide_part3_child > .leftSide_part3_child_description {
+    flex: 5%;
+    padding: 5px 0px 10px 10px;
+  }
+
+  .main > .leftSide > .leftSide_part3 > .leftSide_part3_child > .leftSide_part3_child_value {
+    flex: 5%;
+    background-color: gray;
+    border-radius: 15px;
+    margin: 5px 10px 5px 5px;
+  }
+
+  .main > .leftSide > .leftSide_part3 > .leftSide_part3_child > .leftSide_part3_child_value> div {
+    flex: 95%;
+    border-radius: 15px;
+    font-weight: bold;
+    background-color: orange;
+    color: black;
+    text-align: center;
+  }
+  /******************************* leftSide_part3: End Skills ************************************/
+
+  /******************************* leftSide_part4: Contact me ****************************************/
+  .main > .leftSide > .leftSide_part4 > .leftSide_part4_childTitle {
+    display: flex;
+    flex-direction: row;
+    padding-left: 10px;
+  }
+
+  .main > .leftSide > .leftSide_part4 > .leftSide_part4_childTitle > .leftSide_part4_childTitle_icon {
+    flex: 10%; /* the other (flex: 90%) in .side_part3_child_title  */
+    padding: 5px 0px 15px 0px;
+  }
+
+  .main > .leftSide > .leftSide_part4 > .leftSide_part4_childTitle > .leftSide_part4_childTitle_title {
+    flex: 90%; /* the other (flex: 10%) in .side_part3_child_icon */
+    padding: 5px 0px 15px 5px;
+  }
+
+
+  .main > .leftSide > .leftSide_part4 > .leftSide_part4_childTitle > .leftSide_part4_childTitle_icon img {
+    width: 20px;
+    height: 20px;
+  }
+
+
+  .container {
+    border-radius: 5px;
+    padding: 20px;
+  }
+
+
+  input[type=text], select, textarea {
+    width: 95%;
+    padding: 12px;
+    background-color: white;
+    color:black;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+
+
+
+  input[type=submit] {
+    background-color: orange;
+    font-weight: bold;
+    color: black;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  input[type=submit]:hover {
+    background-color: #d8920fde;
+  }
+
+
+  /******************************* leftSide_part4: End Contact me ************************************/
+
+  /******************************************* RigntSide *********************************************/
+  /* I divided the box (RightSide) into 4 parts (my resume):
+     part 1 is Education, part 2 is My Portfolio, part 3 is Work Experience
+     and part 4 is Army*/
+  .main > .rightSide {
+    background-color: lightgray;
+    flex: 70%;
+    margin: 12px 30px 12px 0px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main > .rightSide > .rightSide_container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+    padding-right: 15px;
+    padding-left: 15px;
+    background-color: white;
+    box-shadow:2px 2px 2px 4px gray;
+  }
+
+  .main > .rightSide > .rightSide_container > .rightSide_container_title {
+    text-shadow: 1px 1px #101dd4; 
+    background-image: linear-gradient(dimgray, black); 
+    color:orange;
+    border-radius: 5px;
+    margin-top: 12px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .main > .rightSide > .rightSide_container > .rightSide_container_title > .h1 {
+    margin: 5px 0px 0px 10px;
+  }
+
+  .main > .rightSide > .rightSide_container > .rightSide_container_subtitle {
+    margin-top: 12px;
+  }
+
+
+  .main > .rightSide> .rightSide_container > .rightSide_container_title > .icon {
+    flex: 10%;
+  }
+
+  .main > .rightSide > .rightSide_container > .rightSide_container_title > .icon img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .main > .rightSide > .rightSide_container > .rightSide_container_title > .text {
+    flex: 90%;
+  }
+
+  .main > .rightSide > .rightSide_container > .rightSide_container_container_iconYears {
+    display: flex;
+    align-items: center;
+    margin-top: 12px;
+  }
+
+  .main> .rightSide > .rightSide_container > .rightSide_container_container_iconYears > .rightSide_container_icon img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .main > .rightSide > .rightSide_container > .rightSide_container_container_iconYears > .rightSide_container_years{
+    padding: 5px 0px 5px 10px;
+  }
+
+  .main > .rightSide > .rightSide_container > .rightSide_container_description{
+    margin: 12px 0px 36px 0px;
+  }
+
+  .main > .rightSide > .rightSide_container > .MyPortfolio{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+    margin-top: 20px;
+    justify-content: space-evenly;
+  }
+
+ .main > .rightSide > .rightSide_container > .MyPortfolio> a > img{
+    width: 270px;
+    height: 200px;
+    border-radius: 15px;
+  } 
+
+
+  .main > .rightSide > .rightSide_container > .MyPortfolio> a > img:hover {
+    opacity: 0.9;
+    border: 3px solid #0a65ec;
+  }
+
+  .footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+
+  
+  @media screen and (max-width: 700px) {
+    .main {
+      flex-direction: column;
+    }
+
+    .main > .leftSide {
+      margin-right: 12px;
+      margin-left: 12px;
+    }
+
+    .main > .rightSide {
+      margin: 0px 0px 0px 0px;
+    }
+
+    .main > .rightSide > .rightSide_container {
+      margin-right: 12px;
+      margin-left: 12px;
+    }
+}
+
